@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "mocha test/api/**/*.test.js test/contrato/**/*.test.js --timeout 20000 --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=index"
+    "test": "mocha test/api/*.test.js test/contrato/*.test.js --timeout 20000 --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=index"
   },
   "devDependencies": {
     "chai": "^5.1.1",
     "dotenv": "^17.2.3",
     "joi": "^17.13.3",
     "mocha": "^11.0.1",
-    "mochawesome": "^7.1.3",
+    "mochawesome": "^7.1.4",
     "pactum": "^3.8.0"
   },
   "description": "Automação de testes API com PactumJS e Joi – Validação de contratos (Schemas)",
