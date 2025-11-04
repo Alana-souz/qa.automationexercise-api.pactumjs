@@ -1,7 +1,4 @@
-// generate-readme.js
-import fs from "fs";
-
-const content = `# 🧩 QA -Projeto de automação de testes de **API REST** usando **PactumJS**, **Joi** e **Mochawesome**, cobrindo testes **funcionais** e de **contrato**.
+# 🧩 QA -Projeto de automação de testes de **API REST** usando **PactumJS**, **Joi** e **Mochawesome**, cobrindo testes **funcionais** e de **contrato**.
   
 
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
