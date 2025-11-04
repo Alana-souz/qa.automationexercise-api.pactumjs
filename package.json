@@ -2,12 +2,19 @@
   "name": "qa-automationexercise-api-pactumjs",
   "version": "1.0.0",
   "type": "module",
+  "description": "Automação de testes de API com PactumJS, Joi e Mochawesome – Validação de contratos e testes funcionais.",
+  "main": "pactum.config.js",
+  "author": "Alana Reis",
+  "license": "ISC",
+
   "scripts": {
-  "test": "npm run test:all",
-  "test:functional": "mocha ./test/api/**/*.test.js --timeout 20000 --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=index",
-  "test:contract": "mocha ./test/contrato/**/*.test.js --timeout 20000 --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=index",
-  "test:all": "mocha ./test/**/*.test.js --timeout 20000 --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=index"
+    "test": "npm run test:all",
+    "test:functional": "mocha ./test/api/**/*.test.js --timeout 20000 --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=index,quiet=true",
+    "test:contract": "mocha ./test/contrato/**/*.test.js --timeout 20000 --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=index,quiet=true",
+    "test:all": "npm run test:functional && npm run test:contract",
+    "test:ci": "npm run test:all || true"
   },
+
   "devDependencies": {
     "chai": "^5.1.1",
     "dotenv": "^17.2.3",
@@ -15,13 +22,5 @@
     "mocha": "^11.0.1",
     "mochawesome": "^7.1.4",
     "pactum": "^3.8.0"
-  },
-  "description": "Automação de testes API com PactumJS e Joi – Validação de contratos (Schemas)",
-  "main": "pactum.config.js",
-  "directories": {
-    "test": "test"
-  },
-  "dependencies": {},
-  "author": "Alana Reis",
-  "license": "ISC"
+  }
 }

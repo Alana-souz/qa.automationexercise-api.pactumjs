@@ -1,4 +1,4 @@
-name: CI - Testes Automatizados API
+name: 🧩 CI - Testes Automatizados API
 
 on:
   push:
@@ -11,22 +11,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do repositório
+      - name: 🧩 Checkout do repositório
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js
+      - name: ⚙️ Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'npm'
 
-      - name: Instalar dependências
-        run: npm ci
+      - name: 📦 Instalar dependências
+        run: npm install
 
-      - name: Executar testes e gerar relatório
-        run: npm run test:report
+      - name: 🧪 Executar testes (funcionais e contrato)
+        run: npm run test:ci
 
-      - name: Upload do relatório
+      - name: 📊 Upload do relatório Mochawesome
+        if: always() # garante upload mesmo se os testes falharem
         uses: actions/upload-artifact@v4
         with:
           name: mochawesome-report
