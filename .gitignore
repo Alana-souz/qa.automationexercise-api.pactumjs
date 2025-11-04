@@ -1,4 +1,5 @@
 node_modules/
 package-lock.json
 serverest/
-mochawesome-report/
+mochawesome-report/*
+C:\exercise-Api\mochawesome-report
