@@ -34,10 +34,8 @@ Demonstrar a criação de **testes de API automatizados**, focando em:
 ---
 
 ## 📂 Estrutura do Projeto
-// generate-readme.js
-import fs from "fs";
 
-const content = `# 🧩 QA -Projeto de automação de testes de **API REST** usando **PactumJS**, **Joi** e **Mochawesome**, cobrindo testes **funcionais** e de **contrato**.
+# 🧩 QA -Projeto de automação de testes de **API REST** usando **PactumJS**, **Joi** e **Mochawesome**, cobrindo testes **funcionais** e de **contrato**.
   
 
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
@@ -88,30 +86,7 @@ qa-automationexercise-api-pactumjs/
     └── workflows/
         └── ci.yml     # Pipeline do GitHub Actions
         
-```
 
-## ⚙️ Instalação
-
-1. **Clone o repositório:**
-
-```bash
-git clone https://github.com/ricardo-zip/qa.automationexercise-api.pactumjs
-cd qa.automationexercise-api.pactumjs
-```
-
-2. **Instale as dependências:**
-```
-│   ├── api/           # Testes funcionais
-│   ├── contrato/      # Testes de contrato (Joi)
-│
-├── helpers/           # Setup, tokens e dados dinâmicos
-├── schemas/           # Schemas Joi
-├── pactum.config.js   # Configurações do PactumJS
-├── package.json       # Dependências e scripts
-└── .github/
-    └── workflows/
-        └── ci.yml     # Pipeline do GitHub Actions
-        
 ```
 
 ## ⚙️ Instalação
@@ -139,6 +114,7 @@ npm run test:report
 ```bash
 ## 📊 Relatórios
 Os relatórios **Mochawesome** são gerados automaticamente após a execução dos testes:
+
 👉 O relatório será salvo em:
 mochawesome-report/mochawesome.html
 
